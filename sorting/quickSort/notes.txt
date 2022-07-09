@@ -1,0 +1,7 @@
+quick sort is not workong properly in dynamic memeory allocation requires refining
+quick sort works well in static memeory allocation
+rest of notes will contain errors
+
+all space memory show 0 output in array after sorting
+to resolve the issues brackets were added i calling of functio of quicksort wherever 
+the swapping techinque was changed from using only 2 variables to using three variables instead and it works with 100 inputs as well

@@ -1,0 +1,8 @@
+Queue/**/*.exe
+link-lists/**/*.exe
+searching/**/*.exe
+sorting/**/*.exe
+Stack-ds/**/*.exe
+Queue/**/.vscode
+
+
