@@ -1,0 +1,74 @@
+Operations of Doubly-Linked list are :
+***************************************************
+traversing a node 
+Append a node to the end of the list
+Prepend a node to the start of list 
+Insert new node to the specific postion in the list
+Deleting a node in list 
+Updating the node (data) in the list
+****************************************************
+
+Append Node Algo:
+Get the New node
+Check if the Node exists with the key
+   if true , abort the Operation
+   if false , continue
+if head==Null   (Start of list i.e the liist is empty)
+   then append at start 
+   else traverse to the end of list 
+   and append the node at end
+
+
+Prepend Node Algo
+ Get the New Node
+check if the Node exists with the key
+if true, abort the Operation
+if false, continue
+head->previous=new_node;
+new_node->next=head;
+head=n;
+
+
+Insert new Node after given node with key Algo
+Get the New node and key of this node you want to link after which the new node.
+Check if any node exist with the given key of the node(after which new node is inserted )
+  if false, abort
+  if true, continue
+Check if any node exist with key of new node
+  if true,abort
+  if false, continue
+Access the Node N after which you want to Insert(Append) the new node 
+  If N node is at end
+   N->next=new_node;
+   new_node->previous=N;
+  But if N exist between the nodes then
+  new_node->next=N->next;
+  N->next->previous=New_node
+  New_node->previous=N;
+  N->next=New_node
+
+Delete the Node using a key Algo
+Get the key of the node you want to Delete
+Check if any node exist with the given key of the node
+  if false, abort
+  if true, continue
+  If head==Null
+    the list is empty
+  else if head!=Null and key matches head Node
+    head=head->next;
+  And if head!=Null and key does not match the head node theb traverse or Access the Node N you want to delete
+  If N node is at end
+   N->previous->Next=Null;(or previous_node->next=Null)(only one link is unlinked at the end)
+  But if N exist between the nodes then
+  previous_node->next=N->next;or previous_node->next=next_node (Next node is the node after Nth node)
+  N->next->previous=previous_node or next_node->previous=previous_node ;
+
+
+Update the node of the key Algo
+Get the key of the node you want to Update
+check if the node exists with the same key
+ if false, abort
+ if true, continue
+Traverse to that node 
+Update the node's data value
+ 

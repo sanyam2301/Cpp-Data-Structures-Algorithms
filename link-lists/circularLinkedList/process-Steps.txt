@@ -1,0 +1,76 @@
+Operations of circular-Linked list are :
+***************************************************
+traversing a node 
+Append a node to the end of the list
+Prepend a node to the start of list 
+Insert new node to the specific postion in the list
+Deleting a node in list 
+Updating the node (data) in the list
+****************************************************
+
+
+note:next is pointer which points to other nodes therefore its data tyoes is of Node type i.e the class node.
+
+
+In nodeExists fuction we use the do while loop only as the logivc of circular list requires that  end 
+at the head that is the last element points to the first element and to check that condition as the last of 
+list do while loop is used that is the traversing pointer gets the value of head two times in one traversal
+
+
+append Algo
+1. take the new node to be appended.
+2.check if node already exists in the circular linked list
+ true abort the Operation
+ false,continue
+3.check if linked list is empty 
+ true , append the new element to start of list .
+ false,continue
+traverse the list t reach the end of list when (ptr->next ==head)
+append the node to end of list .
+make appropriate connection of node 
+
+Prepend algo:
+1. take the new node to be Prepend.
+2.check if node already exists in the circular linked list
+ true abort the Operation
+ false,continue
+3.check if linked list is empty 
+ true , prepend the new element to start of list .
+ false,continue
+traverse the to reach the end of list use the address to connect it to the new node 
+i.e prepend the node at the start of list
+
+Insert node after by key
+1. take the key of node after which new node is to be inserted and the new node to be inserted
+2.check whether a node exist with the given key
+ false, abort
+ true, continue
+3 check whether the given node already exist or not .
+  true, abort
+  false, continue
+4.check whether the insertion takes place at the end of list
+true , then make the connection of with the pointer and insert the new node at the end of list 
+false,
+insert the new node between the nodes.
+
+Delete the node by unique key algo:
+1.take the value of key of the node you want to delete.
+2 check if the node exists 
+false,abort
+true, continue
+3.check if given key is a node at the start of the list
+true, check if only if head node exists i list-> true, delete the head node from list and empty the list
+                                              -> false, delete the head node using delinking the head node and linking the node appropriately
+false(given key is not of head node)
+->delete the node between the node.
+
+
+Update the node by using key
+1. take the key and new data for that node(of given key)
+2.check if node exists 
+false,abort
+true,continue
+update the node->data value by new data given
+
+printlist 
+print the data values of nodes 
